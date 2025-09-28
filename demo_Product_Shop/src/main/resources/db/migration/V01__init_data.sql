@@ -1,0 +1,19 @@
+CREATE TABLE category (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE product (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  category_id BIGINT,
+  name VARCHAR(255) NOT NULL,
+  brand VARCHAR(255),
+  description TEXT,
+  price DECIMAL(12,2) NOT NULL,
+  stock INT NOT NULL DEFAULT 0,
+  sold INT NOT NULL DEFAULT 0,
+  rating DECIMAL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FULLTEXT KEY ftx_name_desc (name, description)
+);
+

@@ -1,0 +1,27 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Laptop Base -->
+  <rect x="50" y="180" width="300" height="20" rx="4" fill="#374151"/>
+  
+  <!-- Laptop Screen -->
+  <rect x="60" y="60" width="280" height="180" rx="8" fill="#1f2937"/>
+  <rect x="70" y="70" width="260" height="160" rx="4" fill="#3b82f6"/>
+  
+  <!-- Screen Content -->
+  <rect x="80" y="80" width="240" height="20" rx="2" fill="#ffffff"/>
+  <rect x="80" y="110" width="180" height="8" rx="1" fill="#ffffff"/>
+  <rect x="80" y="125" width="200" height="8" rx="1" fill="#ffffff"/>
+  <rect x="80" y="140" width="160" height="8" rx="1" fill="#ffffff"/>
+  
+  <!-- Keyboard -->
+  <rect x="80" y="200" width="240" height="30" rx="2" fill="#6b7280"/>
+  
+  <!-- Trackpad -->
+  <rect x="190" y="210" width="20" height="10" rx="2" fill="#9ca3af"/>
+  
+  <!-- Brand Logo -->
+  <circle cx="200" cy="40" r="8" fill="#3b82f6"/>
+  <text x="200" y="45" text-anchor="middle" fill="white" font-size="8" font-weight="bold">P</text>
+</svg>

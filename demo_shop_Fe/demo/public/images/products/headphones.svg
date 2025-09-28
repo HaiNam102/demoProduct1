@@ -1,0 +1,31 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Headband -->
+  <path d="M80 120 Q200 80 320 120" stroke="#1f2937" stroke-width="8" fill="none"/>
+  
+  <!-- Left Ear Cup -->
+  <circle cx="100" cy="140" r="40" fill="#1f2937"/>
+  <circle cx="100" cy="140" r="30" fill="#374151"/>
+  <circle cx="100" cy="140" r="20" fill="#6b7280"/>
+  
+  <!-- Right Ear Cup -->
+  <circle cx="300" cy="140" r="40" fill="#1f2937"/>
+  <circle cx="300" cy="140" r="30" fill="#374151"/>
+  <circle cx="300" cy="140" r="20" fill="#6b7280"/>
+  
+  <!-- Left Ear Pad -->
+  <circle cx="100" cy="140" r="35" fill="#4b5563" opacity="0.3"/>
+  
+  <!-- Right Ear Pad -->
+  <circle cx="300" cy="140" r="35" fill="#4b5563" opacity="0.3"/>
+  
+  <!-- Cable -->
+  <path d="M140 140 Q180 160 220 180" stroke="#6b7280" stroke-width="3" fill="none"/>
+  <circle cx="220" cy="180" r="3" fill="#6b7280"/>
+  
+  <!-- Brand Logo -->
+  <circle cx="200" cy="60" r="8" fill="#3b82f6"/>
+  <text x="200" y="65" text-anchor="middle" fill="white" font-size="8" font-weight="bold">P</text>
+</svg>

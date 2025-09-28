@@ -1,0 +1,27 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Left Shoe -->
+  <path d="M100 120 Q120 100 140 110 Q160 120 180 130 Q200 140 180 160 Q160 180 140 170 Q120 160 100 140 Z" fill="#1f2937"/>
+  
+  <!-- Right Shoe -->
+  <path d="M220 120 Q240 100 260 110 Q280 120 300 130 Q320 140 300 160 Q280 180 260 170 Q240 160 220 140 Z" fill="#1f2937"/>
+  
+  <!-- Shoe Laces -->
+  <path d="M120 130 Q140 125 160 130" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <path d="M120 140 Q140 135 160 140" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <path d="M120 150 Q140 145 160 150" stroke="#ffffff" stroke-width="2" fill="none"/>
+  
+  <path d="M240 130 Q260 125 280 130" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <path d="M240 140 Q260 135 280 140" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <path d="M240 150 Q260 145 280 150" stroke="#ffffff" stroke-width="2" fill="none"/>
+  
+  <!-- Shoe Soles -->
+  <ellipse cx="140" cy="170" rx="40" ry="8" fill="#374151"/>
+  <ellipse cx="260" cy="170" rx="40" ry="8" fill="#374151"/>
+  
+  <!-- Brand Logo -->
+  <circle cx="200" cy="80" r="8" fill="#3b82f6"/>
+  <text x="200" y="85" text-anchor="middle" fill="white" font-size="8" font-weight="bold">P</text>
+</svg>
