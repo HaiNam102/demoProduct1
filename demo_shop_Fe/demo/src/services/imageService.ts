@@ -2,30 +2,30 @@
 export class ImageService {
   private static readonly PRODUCT_IMAGES = {
     // Electronics
-    'laptop': 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=400&auto=format&fit=crop',
-    'phone': 'https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=400&auto=format&fit=crop',
-    'tablet': 'https://images.unsplash.com/photo-1561152044-08a2d3635167?q=80&w=400&auto=format&fit=crop',
-    'headphones': 'https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=400&auto=format&fit=crop',
-    'watch': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop',
-    'camera': 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?q=80&w=400&auto=format&fit=crop',
+    'laptop': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'phone': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'tablet': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'headphones': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'watch': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'camera': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
     
     // Clothing
-    'shirt': 'https://images.unsplash.com/photo-1620799140408-edc6d5f93504?q=80&w=400&auto=format&fit=crop',
-    'shoes': 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400&auto=format&fit=crop',
-    'clothes': 'https://images.unsplash.com/photo-1620799140408-edc6d5f93504?q=80&w=400&auto=format&fit=crop',
+    'shirt': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'shoes': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'clothes': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
     
-    // Books
-    'book': 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop',
+    // Bookss
+    'book': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
     
     // Default images for different categories
-    'electronics': 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=400&auto=format&fit=crop',
-    'clothing': 'https://images.unsplash.com/photo-1620799140408-edc6d5f93504?q=80&w=400&auto=format&fit=crop',
-    'books': 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop',
-    'home': 'https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=400&auto=format&fit=crop',
-    'sports': 'https://images.unsplash.com/photo-1552674605-db6ffd5ca2ce?q=80&w=400&auto=format&fit=crop',
-    'beauty': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=400&auto=format&fit=crop',
-    'fashion': 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=400&auto=format&fit=crop',
-    'accessories': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop',
+    'electronics': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'clothing': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'books': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'home': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'sports': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'beauty': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'fashion': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'accessories': 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
   };
 
   // Lấy hình ảnh cho sản phẩm dựa trên tên hoặc danh mục
@@ -50,12 +50,12 @@ export class ImageService {
     }
     
     // Mặc định sử dụng laptop image
-    return 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop';
+    return 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3';
   }
 
   // Lấy hình ảnh placeholder
   static getPlaceholderImage(): string {
-    return 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop';
+    return 'https://tse2.mm.bing.net/th/id/OIP.YaDBxhATS_T_T1VenOPbiAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3';
   }
 
   // Lấy hình ảnh cuối cùng cho sản phẩm

@@ -132,8 +132,8 @@ const ProductList: React.FC = () => {
     <div className="product-list-container">
       {/* Header */}
       <div className="product-list-header">
-        <h1 className="product-list-title">Sản phẩm</h1>
-        <p className="product-list-subtitle">Khám phá bộ sưu tập sản phẩm đa dạng của chúng tôi</p>
+        <h1 className="product-list-title">Coffee Shop</h1>
+        <p className="product-list-subtitle">Khám phá thế giới cà phê phong phú với chất lượng thượng hạng</p>
       </div>
 
       {/* Filters and Sort */}

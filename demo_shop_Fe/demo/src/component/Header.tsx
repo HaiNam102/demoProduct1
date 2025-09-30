@@ -16,7 +16,7 @@ const Header: React.FC = () => {
           <div className="header-logo-icon">
             <span className="header-logo-initial">P</span>
           </div>
-          <span className="header-logo-text">ProductShop</span>
+          <span className="header-logo-text">Coffee Shop</span>
         </Link>
 
         {/* Search Bar */}

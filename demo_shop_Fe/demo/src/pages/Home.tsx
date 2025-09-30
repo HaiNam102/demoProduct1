@@ -9,10 +9,10 @@ const Home: React.FC = () => {
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">
-              Chào mừng đến với ProductShop
+              Chào mừng đến với Coffee Shop
             </h1>
             <p className="hero-subtitle">
-              Khám phá bộ sưu tập sản phẩm đa dạng với chất lượng cao
+              Khám phá thế giới cà phê phong phú với chất lượng thượng hạng
             </p>
             <div className="hero-buttons">
               <Link to="/products" className="btn btn-primary btn-large">
