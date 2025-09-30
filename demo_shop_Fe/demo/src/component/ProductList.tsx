@@ -16,18 +16,22 @@ const ProductList: React.FC = () => {
   const [sortDir, setSortDir] = useState('desc');
   const [pageSize] = useState(12);
   const [addingToCart, setAddingToCart] = useState<number | null>(null);
+  const [categoryId, setCategoryId] = useState<number | null>(null); // New state for categoryId
 
   const fetchProducts = useCallback(async (page: number) => {
     try {
       setLoading(true);
       setError(null);
-      const response: ApiResponse<PagedResponse<ProductListDto>> = await apiService.getProducts(
-        page,
-        pageSize,
-        sortBy,
-        sortDir
-      );
-      
+
+      let response: ApiResponse<PagedResponse<ProductListDto>>;
+      if (categoryId) {
+        // Use getProductsByCategoryId if categoryId is selected
+        response = await apiService.getProductsByCategoryId(categoryId, page, pageSize, sortBy, sortDir);
+      } else {
+        // Use getProducts if no categoryId is selected
+        response = await apiService.getProducts(page, pageSize, sortBy, sortDir, null);
+      }
+
       if (response.success) {
         setProducts(response.data.items);
         setTotalPages(response.data.totalPages);
@@ -40,7 +44,7 @@ const ProductList: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }, [pageSize, sortBy, sortDir]);
+  }, [pageSize, sortBy, sortDir, categoryId]);
 
   useEffect(() => {
     fetchProducts(0);
@@ -59,18 +63,21 @@ const ProductList: React.FC = () => {
     }
   };
 
+  const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setCategoryId(event.target.value ? parseInt(event.target.value) : null);
+    fetchProducts(0); // Fetch products for the selected category
+  };
+
   const handleAddToCart = (product: ProductListDto, event: React.MouseEvent) => {
     event.stopPropagation();
     event.preventDefault();
     setAddingToCart(product.id);
     console.log('Added to cart:', product.name);
-    // Here you would typically add the product to a global state (e.g., Context or Redux)
 
     setTimeout(() => {
       setAddingToCart(null);
     }, 500); // Animation duration
   };
-
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN', {
@@ -153,6 +160,19 @@ const ProductList: React.FC = () => {
               </svg>
             </button>
           </div>
+          <div className="product-category-filter">
+            <span className="product-category-label">Danh mục:</span>
+            <select
+              value={categoryId || ''}
+              onChange={handleCategoryChange}
+              className="product-category-select"
+            >
+              <option value="">Tất cả</option>
+              <option value="1">Danh mục 1</option>
+              <option value="2">Danh mục 2</option>
+              <option value="3">Danh mục 3</option>
+            </select>
+          </div>
           <div className="product-count">
             Hiển thị {products.length} trong tổng số {totalElements} sản phẩm
           </div>
@@ -179,10 +199,10 @@ const ProductList: React.FC = () => {
                   <img
                     src={ImageService.getFinalImageUrl(product.imageUrl, product.name, product.categoryName)}
                     alt={product.name}
-                    className="product-image"
+                    className="product-image enhanced-image" // Add a new class for styling
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = ImageService.getPlaceholderImage();
+                      target.src = ImageService.getPlaceholderImage(); // Fallback image
                     }}
                   />
                 </div>
@@ -190,7 +210,7 @@ const ProductList: React.FC = () => {
                   <h3 className="product-name">{product.name}</h3>
                   <p className="product-category">{product.categoryName}</p>
                   <div className="product-price-row">
-                    <span className="product-price">{formatPrice(product.price)}</span>
+                    <span className="product-price">{product.price + '.000 VNĐ'}</span>
                     <span className={`product-stock ${product.stock > 0 ? 'in-stock' : 'out-of-stock'}`}>
                       {product.stock > 0 ? 'Còn hàng' : 'Hết hàng'}
                     </span>
