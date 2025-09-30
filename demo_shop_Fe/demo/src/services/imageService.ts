@@ -2,30 +2,30 @@
 export class ImageService {
   private static readonly PRODUCT_IMAGES = {
     // Electronics
-    'laptop': '/images/products/laptop.svg',
-    'phone': '/images/products/phone.svg',
-    'tablet': '/images/products/tablet.svg',
-    'headphones': '/images/products/headphones.svg',
-    'watch': '/images/products/watch.svg',
-    'camera': '/images/products/camera.svg',
+    'laptop': 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=400&auto=format&fit=crop',
+    'phone': 'https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=400&auto=format&fit=crop',
+    'tablet': 'https://images.unsplash.com/photo-1561152044-08a2d3635167?q=80&w=400&auto=format&fit=crop',
+    'headphones': 'https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=400&auto=format&fit=crop',
+    'watch': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop',
+    'camera': 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?q=80&w=400&auto=format&fit=crop',
     
     // Clothing
-    'shirt': '/images/products/shirt.svg',
-    'shoes': '/images/products/shoes.svg',
-    'clothes': '/images/products/shirt.svg',
+    'shirt': 'https://images.unsplash.com/photo-1620799140408-edc6d5f93504?q=80&w=400&auto=format&fit=crop',
+    'shoes': 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400&auto=format&fit=crop',
+    'clothes': 'https://images.unsplash.com/photo-1620799140408-edc6d5f93504?q=80&w=400&auto=format&fit=crop',
     
     // Books
-    'book': '/images/products/book.svg',
+    'book': 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop',
     
     // Default images for different categories
-    'electronics': '/images/products/laptop.svg',
-    'clothing': '/images/products/shirt.svg',
-    'books': '/images/products/book.svg',
-    'home': '/images/products/camera.svg',
-    'sports': '/images/products/headphones.svg',
-    'beauty': '/images/products/phone.svg',
-    'fashion': '/images/products/shirt.svg',
-    'accessories': '/images/products/watch.svg',
+    'electronics': 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=400&auto=format&fit=crop',
+    'clothing': 'https://images.unsplash.com/photo-1620799140408-edc6d5f93504?q=80&w=400&auto=format&fit=crop',
+    'books': 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop',
+    'home': 'https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=400&auto=format&fit=crop',
+    'sports': 'https://images.unsplash.com/photo-1552674605-db6ffd5ca2ce?q=80&w=400&auto=format&fit=crop',
+    'beauty': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=400&auto=format&fit=crop',
+    'fashion': 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=400&auto=format&fit=crop',
+    'accessories': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop',
   };
 
   // Lấy hình ảnh cho sản phẩm dựa trên tên hoặc danh mục
@@ -50,36 +50,19 @@ export class ImageService {
     }
     
     // Mặc định sử dụng laptop image
-    return '/images/products/laptop.svg';
+    return 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop';
   }
 
   // Lấy hình ảnh placeholder
   static getPlaceholderImage(): string {
-    return '/images/products/laptop.svg';
-  }
-
-  // Kiểm tra xem URL có phải là hình ảnh hợp lệ không
-  static isValidImageUrl(url: string): boolean {
-    if (!url) return false;
-    
-    // Kiểm tra nếu là URL từ server
-    if (url.startsWith('http')) {
-      return true;
-    }
-    
-    // Kiểm tra nếu là đường dẫn local
-    if (url.startsWith('/')) {
-      return true;
-    }
-    
-    return false;
+    return 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop';
   }
 
   // Lấy hình ảnh cuối cùng cho sản phẩm
   static getFinalImageUrl(productImageUrl?: string, productName?: string, categoryName?: string): string {
     // Nếu có imageUrl từ server và hợp lệ, sử dụng nó
-    if (this.isValidImageUrl(productImageUrl || '')) {
-      return productImageUrl!;
+    if (productImageUrl && productImageUrl.startsWith('http')) {
+      return productImageUrl;
     }
     
     // Nếu không có imageUrl, sử dụng hình ảnh mặc định dựa trên tên sản phẩm
